@@ -202,7 +202,7 @@ table {
 }
 html {
   font-size: 62.5%;
-  background-color: gainsboro;
+  background-color: snow;
 }
 html,
 body {
@@ -267,6 +267,16 @@ header {
 .dropdownmenu {
   position: absolute;
   left: 65%;
+  right: 0;
+}
+.dropdownmenu .signup {
+  background-color: black;
+  font-family: "Satisfy", cursive;
+  text-transform: uppercase;
+  padding: 0;
+}
+.dropdownmenu .signup a {
+  font-size: 25px;
 }
 .dropdownmenu ul,
 .dropdownmenu li {
@@ -275,23 +285,23 @@ header {
 }
 .dropdownmenu ul {
   display: flex;
-  background: gray;
   list-style: none;
-  width: 100%;
 }
 .dropdownmenu a {
-  background: black;
   color: #ffffff;
   display: flex;
   font-style: "Source Sans Pro", Sans-Serif;
   font-size: 20px;
-  padding: 10px 25px;
+  padding-top: 2%;
+  margin: 15px;
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease;
+  width: 100%;
 }
 .dropdownmenu li:hover a {
-  background: #000000;
+  text-align: center;
+  text-transform: uppercase;
 }
 #submenu {
   display: flex;
@@ -314,10 +324,7 @@ li:hover ul#submenu {
   width: 100%;
 }
 #submenu a:hover {
-  background: #df4b05;
-}
-#submenu a {
-  background-color: #000000;
+  background: black;
 }
 footer {
   border-top: 1px solid black;
@@ -332,6 +339,7 @@ footer {
   /*background: linear-gradient(60deg, #e1306c 0%, rgba(0,172,193,1) 100%);*/
 }
 .hero .hero-img img {
+  position: relative;
   max-width: 100%;
   opacity: 0.82;
 }
@@ -339,9 +347,10 @@ footer {
   color: white;
   text-shadow: black 2px 2px;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
-  padding: 20%;
+  left: 18%;
+  bottom: 45%;
   display: flex;
   position: absolute;
   z-index: 1;
@@ -429,8 +438,7 @@ footer {
 }
 .mission {
   padding-top: 2%;
-  display: flex;
-  justify-content: space-evenly;
+  text-align: center;
 }
 .mission h2 {
   padding: 1%;
@@ -439,21 +447,52 @@ footer {
   padding: 1%;
 }
 .about-us {
+  border-top: 1px solid black;
   padding-top: 2%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row-reverse;
 }
 .about-us h2 {
+  text-align: center;
   padding: 1%;
 }
 .about-us p {
   padding: 1%;
 }
 .about-us .team-member {
-  padding: 0.5%;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 8px;
+  grid-row-gap: 5px;
+}
+.about-us .team-member h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+.about-us .team-member p {
+  padding: 2%;
+}
+.about-us .team-member .member {
+  padding: 2%;
+  text-align: center;
+}
+.about-us .team-member .member:first-child {
+  grid-area: 0.25;
+}
+.about-us .team-member .member:nth-child(2) {
+  grid-area: 0.08333333;
+}
+.about-us .team-member .member:nth-child(3) {
+  grid-area: 0.04166667;
+}
+.about-us .team-member .member:nth-child(4) {
+  grid-area: 0.33333333;
+}
+.about-us .team-member .member:nth-child(5) {
+  grid-area: 0.11111111;
 }
 .about-us .team-member .member-photo {
   border: 1px solid black;
   border-radius: 20px;
+  max-width: 50%;
 }

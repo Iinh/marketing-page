@@ -8,6 +8,7 @@
     //   rgba(255, 255, 0, 0.45)
     // );
     img {
+      position: relative;
       max-width: 100%;
       opacity: 0.82;
     }
@@ -16,12 +17,10 @@
     color: white;
     text-shadow: black 2px 2px;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
-    padding: 20%;
-    // position: fixed;
-    // width: 100%;
-    // bottom: 45%;
+    left: 18%;
+    bottom: 45%;
     display: flex;
     position: absolute;
     z-index: 1;
@@ -67,6 +66,24 @@
     // margin-top: 200px;
   }
 }
+
+//   .cta2 {
+//     z-index: 10;
+//     position: absolute;
+//     bottom: 40%;
+//     width: 100%;
+//     a {
+//       font-family: "Satisfy", cursive;
+//       text-shadow: rgb(233, 232, 228) 1px 0 10px;
+
+//       text-align: center;
+//       background: black;
+//       text-decoration: none;
+//       font-size: 30px;
+//       color: white;
+//     }
+//   }
+// }
 
 .flex {
   /*Flexbox for containers*/
@@ -122,8 +139,8 @@
 // our mission
 .mission {
   padding-top: 2%;
-  display: flex;
-  justify-content: space-evenly;
+  text-align: center;
+
   h2 {
     padding: 1%;
   }
@@ -133,22 +150,53 @@
 }
 
 .about-us {
+  border-top: 1px solid black;
   padding-top: 2%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row-reverse;
   h2 {
+    text-align: center;
     padding: 1%;
   }
   p {
     padding: 1%;
   }
-  .team-member {
-    padding: 0.5%;
 
+  .team-member {
+    h3 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    p {
+      padding: 2%;
+    }
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 5px;
+    .member {
+      padding: 2%;
+      text-align: center;
+    }
+    .member:first-child {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .member:nth-child(2) {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .member:nth-child(3) {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+    .member:nth-child(4) {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    .member:nth-child(5) {
+      grid-area: 2 / 2 / 3 / 3;
+    }
     .member-photo {
       border: 1px solid black;
       border-radius: 20px;
+      max-width: 50%;
     }
   }
 }

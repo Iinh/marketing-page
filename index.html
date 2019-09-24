@@ -15,6 +15,7 @@
     />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
   </head>
+  
   <body>
     <header>
       <div class="logo">
@@ -25,12 +26,12 @@
           <li>
             <a href="#"> About</a>
             <ul id="submenu">
-              <li><a href="#">Our Mission</a></li>
-              <li><a href="#">Our Team</a></li>
+              <li><a href="#mission">Our Mission</a></li>
+              <li><a href="#team">Our Team</a></li>
             </ul>
           </li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">SIGN IN</a></li>
+          <li><a href="#">Sign In</a></li>
+          <li class="signup"><a href="#">Sign Up</a></li>
         </ul>
       </nav>
     </header>
@@ -45,51 +46,16 @@
         <div>&nbsp;Deserve &nbsp;</div>
         <div>&nbsp;Better.</div>
       </div>
+      <!-- <div class="cta2"><a href="#">Sign Up Today</a></div> -->
+
       <div class="hero-img"><img src="img/hero-bw.jpg" /></div>
-      <div class="cta2"><a href="#">SIGN UP</a></div>
     </section>
     <!--- closes hero --->
-    <div class="waves-container">
-      <svg
-        class="waves"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28"
-        preserveAspectRatio="none"
-        shape-rendering="auto"
-      >
-        <defs>
-          <path
-            id="gentle-wave"
-            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-          />
-        </defs>
-        <g class="parallax">
-          <use
-            xlink:href="#gentle-wave"
-            x="48"
-            y="0"
-            fill="rgba(211,211,211,0.7"
-          />
-          <use
-            xlink:href="#gentle-wave"
-            x="48"
-            y="3"
-            fill="rgba(220,220,220,0.5)"
-          />
-          <use
-            xlink:href="#gentle-wave"
-            x="48"
-            y="5"
-            fill="rgba(220,220,220,0.3)"
-          />
-          <use xlink:href="#gentle-wave" x="48" y="7" fill="#dcdcdc" />
-        </g>
-      </svg>
-    </div>
-    <!--- closes hero --->
-    <section class="mission">
+
+    <section id="mission" class="mission">
+        
       <h2>Our Mission</h2>
+      
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus ex
         reiciendis voluptas beatae nesciunt officia ipsa dignissimos dolorem
@@ -113,68 +79,112 @@
         consectetur. In, reiciendis?
       </p>
     </section>
-    <section class="about-us">
+    <div class="waves-container">
+      <svg
+        class="waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+        shape-rendering="auto"
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+        </defs>
+        <g class="parallax">
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="0"
+            fill="rgba(255,255,255,0.7"
+          />
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="3"
+            fill="rgba(211,211,211,0.5)"
+          />
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="5"
+            fill="rgba(255,255,255,0.3)"
+          />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#FFFAFA"
+          />
+        </g>
+      </svg>
+    </div>
+    <section id="team" class="about-us">
+        
       <h2>About Us</h2>
+      
       <div class="team-member">
-        <img class="member-photo" src="img/bayron.png" />
-        <div class="team-text">
-          <h3>Bayron</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-            beatae quia assumenda vitae facilis sunt, quibusdam unde ut velit
-            labore ratione. Laudantium autem corporis minima, beatae iusto
-            quisquam asperiores distinctio.
-          </p>
+        <div class="member">
+          <img class="member-photo" src="img/bayron.png" />
+          <div class="team-text">
+            <h3>Bayron Puac</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore beatae quia assumenda vitae facilis sunt, quibusdam unde
+              ut velit labore ratione. Laudantium autem corporis minima, beatae
+              iusto quisquam asperiores distinctio.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="team-member">
-        <img class="member-photo" src="img/justin.png" />
-        <div class="team-text">
-          <h3>Justin</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-            beatae quia assumenda vitae facilis sunt, quibusdam unde ut velit
-            labore ratione. Laudantium autem corporis minima, beatae iusto
-            quisquam asperiores distinctio.
-          </p>
+        <div class="member">
+          <img class="member-photo" src="img/justin.png" />
+          <div class="team-text">
+            <h3>Justin McCuttcheon</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore beatae quia assumenda vitae facilis sunt, quibusdam unde
+              ut velit labore ratione. Laudantium autem corporis minima, beatae
+              iusto quisquam asperiores distinctio.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="team-member">
-        <img class="member-photo" src="img/connor.png" />
-        <div class="team-text">
-          <h3>Connor</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-            beatae quia assumenda vitae facilis sunt, quibusdam unde ut velit
-            labore ratione. Laudantium autem corporis minima, beatae iusto
-            quisquam asperiores distinctio.
-          </p>
+        
+        <div class="member">
+          <img class="member-photo" src="img/lyn.png" />
+          <div class="team-text">
+            <h3>Lyn Nguyen</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore beatae quia assumenda vitae facilis sunt, quibusdam unde
+              ut velit labore ratione. Laudantium autem corporis minima, beatae
+              iusto quisquam asperiores distinctio.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="team-member">
-        <img class="member-photo" src="img/lyn.png" />
-        <div class="team-text">
-          <h3>Lyn</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-            beatae quia assumenda vitae facilis sunt, quibusdam unde ut velit
-            labore ratione. Laudantium autem corporis minima, beatae iusto
-            quisquam asperiores distinctio.
-          </p>
+        <div class="member">
+            <img class="member-photo" src="img/connor.png" />
+            <div class="team-text">
+              <h3>Connor C</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Inventore beatae quia assumenda vitae facilis sunt, quibusdam unde
+                ut velit labore ratione. Laudantium autem corporis minima, beatae
+                iusto quisquam asperiores distinctio.
+              </p>
+            </div>
+          </div>
+        <div class="member">
+          <img class="member-photo" src="img/angela.png" />
+          <div class="team-text">
+            <h3>Angela La Salle</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore beatae quia assumenda vitae facilis sunt, quibusdam unde
+              ut velit labore ratione. Laudantium autem corporis minima, beatae
+              iusto quisquam asperiores distinctio.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="team-member">
-        <img class="member-photo" src="img/angela.png" />
-        <div class="team-text">
-          <h3>Angela</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
-            beatae quia assumenda vitae facilis sunt, quibusdam unde ut velit
-            labore ratione. Laudantium autem corporis minima, beatae iusto
-            quisquam asperiores distinctio.
-          </p>
-        </div>
-      </div>
+      
     </section>
     <!--- closes about product --->
     <footer>Copyright 2019 Tipsease Team</footer>

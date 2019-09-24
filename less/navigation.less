@@ -28,8 +28,20 @@ header {
 }
 
 .dropdownmenu {
+  .signup {
+    a {
+      font-size: 25px;
+    }
+    background-color: black;
+
+    font-family: "Satisfy", cursive;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
   position: absolute;
   left: 65%;
+  right: 0;
 }
 .dropdownmenu ul,
 .dropdownmenu li {
@@ -38,24 +50,25 @@ header {
 }
 .dropdownmenu ul {
   display: flex;
-  background: gray;
+
   list-style: none;
-  width: 100%;
 }
 
 .dropdownmenu a {
-  background: black;
   color: #ffffff;
   display: flex;
   font-style: @body-font;
   font-size: 20px;
-  padding: 10px 25px;
+  padding-top: 2%;
+  margin: 15px;
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease;
+  width: 100%;
 }
 .dropdownmenu li:hover a {
-  background: #000000;
+  text-align: center;
+  text-transform: uppercase;
 }
 #submenu {
   display: flex;
@@ -77,8 +90,5 @@ li:hover ul#submenu {
   width: 100%;
 }
 #submenu a:hover {
-  background: #df4b05;
-}
-#submenu a {
-  background-color: #000000;
+  background: black;
 }

@@ -1,94 +1,43 @@
 header {
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.logo {
-  position: relative;
-  bottom: 20px;
-  right: 40px;
-  right: 35%;
-
-  p a {
-    color: rebeccapurple;
-    font-family: "Pacifico", cursive;
-    text-decoration: none;
-    font-size: 70px;
-    font-style: italic;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #ff00de,
-      0 0 70px #ff00de;
-  }
-
-  p a:hover {
-    animation: neon6 1.5s ease-in-out infinite alternate;
-  }
-}
-
-.dropdownmenu {
-  .signup {
-    a {
-      font-size: 25px;
-    }
-    background-color: black;
-
-    font-family: "Satisfy", cursive;
-    text-transform: uppercase;
-    padding: 0;
-  }
-
-  position: absolute;
-  left: 65%;
-  right: 0;
-}
-.dropdownmenu ul,
-.dropdownmenu li {
-  margin: 0;
-  padding: 0;
-}
-.dropdownmenu ul {
-  display: flex;
-
-  list-style: none;
-}
-
-.dropdownmenu a {
-  color: #ffffff;
-  display: flex;
-  font-style: @body-font;
-  font-size: 20px;
-  padding-top: 2%;
-  margin: 15px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  width: 100%;
-}
-.dropdownmenu li:hover a {
-  text-align: center;
-  text-transform: uppercase;
-}
-#submenu {
-  display: flex;
-  flex-direction: column;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 35px;
-  visibility: hidden;
-  z-index: 1;
-}
-li:hover ul#submenu {
-  opacity: 1;
-  top: 40px; /* adjust this as per top nav padding top & bottom comes */
-  visibility: visible;
-}
-#submenu li {
-  float: none;
-  width: 100%;
-}
-#submenu a:hover {
   background: black;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 3.5s ease infinite;
+  }
+
+  .logo {
+    a {
+      color: white;
+      font-family: "Pacifico", cursive;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-size: 4rem;
+      font-style: italic;
+      // text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px white, 0 0 70px black;
+    }
+
+    p a:hover {
+      animation: neon6 1.5s ease-in-out infinite alternate;
+    }
+  }
+  nav {
+    display: flex;
+    a {
+      color: white;
+      padding: 2rem;
+      font-style: @body-font;
+      font-size: 2rem;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      &:hover {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
 }

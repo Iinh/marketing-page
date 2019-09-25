@@ -1,3 +1,14 @@
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @keyframes neon6 {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
@@ -241,93 +252,43 @@ img {
   margin: 0 auto;
 }
 header {
-  position: absolute;
-  z-index: 1;
+  background: black;
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: space-between;
 }
-.logo {
-  position: relative;
-  bottom: 20px;
-  right: 40px;
-  right: 35%;
+header:hover {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 3.5s ease infinite;
 }
-.logo p a {
-  color: rebeccapurple;
+header .logo a {
+  color: white;
   font-family: "Pacifico", cursive;
   text-decoration: none;
-  font-size: 70px;
+  margin-left: 2rem;
+  font-size: 4rem;
   font-style: italic;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de;
 }
-.logo p a:hover {
+header .logo p a:hover {
   animation: neon6 1.5s ease-in-out infinite alternate;
 }
-.dropdownmenu {
-  position: absolute;
-  left: 65%;
-  right: 0;
-}
-.dropdownmenu .signup {
-  background-color: black;
-  font-family: "Satisfy", cursive;
-  text-transform: uppercase;
-  padding: 0;
-}
-.dropdownmenu .signup a {
-  font-size: 25px;
-}
-.dropdownmenu ul,
-.dropdownmenu li {
-  margin: 0;
-  padding: 0;
-}
-.dropdownmenu ul {
+header nav {
   display: flex;
-  list-style: none;
 }
-.dropdownmenu a {
-  color: #ffffff;
-  display: flex;
+header nav a {
+  color: white;
+  padding: 2rem;
   font-style: "Source Sans Pro", Sans-Serif;
-  font-size: 20px;
-  padding-top: 2%;
-  margin: 15px;
+  font-size: 2rem;
   text-align: center;
   text-decoration: none;
   transition: all 0.25s ease;
-  width: 100%;
 }
-.dropdownmenu li:hover a {
-  text-align: center;
+header nav a:hover {
   text-transform: uppercase;
-}
-#submenu {
-  display: flex;
-  flex-direction: column;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 35px;
-  visibility: hidden;
-  z-index: 1;
-}
-li:hover ul#submenu {
-  opacity: 1;
-  top: 40px;
-  /* adjust this as per top nav padding top & bottom comes */
-  visibility: visible;
-}
-#submenu li {
-  float: none;
-  width: 100%;
-}
-#submenu a:hover {
-  background: black;
+  font-weight: bold;
 }
 footer {
-  border-top: 1px solid black;
   margin-top: 2%;
   padding: 1%;
   font-size: 18px;
@@ -338,61 +299,55 @@ footer {
   text-align: center;
   /*background: linear-gradient(60deg, #e1306c 0%, rgba(0,172,193,1) 100%);*/
 }
+@media (max-width: 500px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .hero .hero-img img {
   position: relative;
   max-width: 100%;
   opacity: 0.82;
 }
-.hero #container {
+.hero .container {
+  background-color: black;
   color: white;
   text-shadow: black 2px 2px;
   text-transform: uppercase;
   font-size: 45px;
   font-weight: bold;
-  left: 18%;
-  bottom: 45%;
   display: flex;
   position: absolute;
+  top: 45%;
+  left: 10%;
   z-index: 1;
-  text-align: center;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .hero .container {
+    display: inline-block;
+    width: 70%;
+    left: 12%;
+  }
+}
+.hero .container div {
+  width: 100%;
 }
 .hero #flip {
-  height: 50px;
+  height: 45px;
   width: 100%;
   overflow: hidden;
 }
 .hero #flip > div > div {
   color: white;
   height: 45px;
-  width: 100%;
+  width: 100;
   margin-bottom: 45px;
   display: inline-block;
 }
 .hero #flip div:first-child {
   animation: show 3s linear 4;
-}
-.hero #flip div div {
-  background: #42c58a;
-  width: 100%;
-}
-.hero #flip div:first-child div {
-  background: #4ec7f3;
-}
-.hero #flip div:last-child div {
-  background: #dc143c;
-}
-.hero p {
-  max-width: 100%;
-  font-size: 12px;
-  color: #999;
-}
-.flex {
-  /*Flexbox for containers*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 .waves {
   position: relative;
@@ -402,6 +357,12 @@ footer {
   /*to erase bottom-border*/
   min-height: 100px;
   max-height: 150px;
+}
+@media (max-width: 500px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
 }
 .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
@@ -421,20 +382,6 @@ footer {
 .parallax > use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
-}
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
-  }
-  .content {
-    height: 30vh;
-  }
-  h1 {
-    font-size: 34px;
-    font-weight: bold;
-  }
 }
 .mission {
   padding-top: 2%;

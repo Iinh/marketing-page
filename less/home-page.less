@@ -1,27 +1,24 @@
 .hero {
+  background-color: #898d82;
   @media @mobile {
     display: flex;
     flex-direction: column;
   }
   position: relative;
   text-align: center;
-  /*background: linear-gradient(60deg, #e1306c 0%, rgba(0,172,193,1) 100%);*/
   .hero-img {
-    // background-color: linear-gradient(
-    //   rgba(220, 220, 220, 0.45),
-    //   rgba(255, 255, 0, 0.45)
-    // );
     img {
       position: relative;
       max-width: 100%;
-      opacity: 0.82;
     }
   }
+
   .container {
     @media @mobile {
       display: inline-block;
       width: 70%;
-      left: 12%;
+      top: 20vh;
+      left: 15vw;
     }
     background-color: black;
     color: white;
@@ -31,55 +28,44 @@
     font-weight: bold;
     display: flex;
     position: absolute;
-    top: 45%;
-    left: 10%;
+    top: 50vh;
+    left: 5vw;
+    right: 5vw;
     z-index: 1;
-    width: 100%;
+    width: 90%;
     div {
       width: 100%;
     }
   }
+}
 
-  #flip {
-    @media @mobile {
-    }
-    height: 45px;
-    width: 100%;
-    overflow: hidden;
+#flip {
+  @media @mobile {
   }
+  height: 45px;
+  width: 100%;
+  overflow: hidden;
+}
 
-  #flip > div > div {
-    color: white;
-    // padding: 4px 12px;
-    height: 45px;
-    width: 100;
-    margin-bottom: 45px;
-    display: inline-block;
+#flip > div > div {
+  color: white;
+  height: 45px;
+  width: 100;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+#flip div:first-child {
+  @media @mobile {
   }
-
-  #flip div:first-child {
-    @media @mobile {
-    }
-    animation: show 3s linear 4;
-  }
-
-  //   #flip div div {
-  //     background: #42c58a;
-  //     width: 100%;
-  //   }
-  //   #flip div:first-child div {
-  //     background: #4ec7f3;
-  //   }
-  //   #flip div:last-child div {
-  //     background: #dc143c;
-  //   }
+  animation: show 3s linear 25;
 }
 
 .waves {
   position: relative;
   width: 100%;
   height: 15vh;
-  margin-bottom: -7px; /*to erase bottom-border*/
+  margin-bottom: 7px; /*to erase bottom-border*/
   min-height: 100px;
   max-height: 150px;
   @media @mobile {
@@ -107,67 +93,173 @@
   animation-duration: 20s;
 }
 
-// our mission
-.mission {
-  padding-top: 2%;
-  text-align: center;
-
-  h2 {
-    padding: 1%;
+.product {
+  background-image: -webkit-linear-gradient(120deg, gainsboro 50%, #898d82 50%);
+  min-height: 500px;
+  border-top: 1px solid #898d82;
+  @media @mobile {
+    background-image: -webkit-linear-gradient(
+      90deg,
+      gainsboro 50%,
+      #898d82 50%
+    );
   }
-  p {
-    padding: 1%;
+  width: 100%;
+  h2 {
+    text-align: center;
+  }
+  .about-product {
+    display: flex;
+    @media @mobile {
+      flex-direction: column;
+    }
+    &:nth-child(1) {
+      h2 {
+        background: white;
+        margin-left: 20%;
+        margin-right: 20%;
+        font-weight: bold;
+        color: #898d82;
+      }
+      flex-direction: row-reverse;
+    }
+    &:nth-child(2) {
+      h2 {
+        color: white;
+        font-weight: bold;
+        margin-left: 20%;
+        margin-right: 20%;
+        background: #7d8177;
+      }
+    }
+
+    .product-text {
+      padding: 6%;
+      text-align: justify;
+      p {
+        padding: 1%;
+        font-size: 1.8rem;
+        margin: 2%;
+      }
+    }
+
+    img {
+      max-width: 35%;
+      visibility: hidden;
+      @media @mobile {
+        display: none;
+      }
+    }
   }
 }
 
 .about-us {
-  border-top: 1px solid black;
-  padding-top: 2%;
-  h2 {
-    text-align: center;
-    padding: 1%;
+  background: gainsboro;
+  text-align: center;
+  h3 {
+    font-size: 4rem;
   }
-  p {
-    padding: 1%;
+  .group {
+    display: flex;
+    margin: 2%;
+
+    @media only screen and (max-width: 1000px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2,
+      p {
+        font-size: 12px;
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2,
+      p {
+        font-size: 8px;
+      }
+    }
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.profile-card {
+  margin: 1%;
+  @media @mobile {
+    margin-top: 4%;
   }
 
-  .team-member {
-    h3 {
-      font-weight: bold;
-      font-size: 20px;
-    }
-    p {
-      padding: 2%;
-    }
-    display: grid;
-    justify-content: space-evenly;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 8px;
-    grid-row-gap: 5px;
-    .member {
-      padding: 2%;
-      text-align: center;
-    }
-    .member:first-child {
-      grid-area: 1 / 1 / 2 / 2;
-    }
-    .member:nth-child(2) {
-      grid-area: 1 / 2 / 2 / 3;
-    }
-    .member:nth-child(3) {
-      grid-area: 1 / 3 / 2 / 4;
-    }
-    .member:nth-child(4) {
-      grid-area: 2 / 1 / 3 / 2;
-    }
-    .member:nth-child(5) {
-      grid-area: 2 / 2 / 3 / 3;
-    }
-    .member-photo {
-      border: 1px solid black;
-      border-radius: 20px;
-      max-width: 50%;
+  border-radius: 10%;
+  margin: 0 auto;
+  display: block;
+  height: 24rem;
+  width: 24rem;
+  background-size: cover;
+  overflow: hidden;
+  transition: all ease 0.3s;
+  &:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 5s ease infinite;
+    border-radius: 5px;
+    border: 3px solid black;
+    height: 42rem;
+    width: 30rem;
+
+    .profile-bio {
+      opacity: 1;
     }
   }
+}
+
+.teamMember {
+  text-align: center;
+  img {
+    border-radius: 10%;
+    margin: 20px auto;
+    display: block;
+    width: 20rem;
+    border: 4px solid black;
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    line-height: 25px;
+    display: inline-block;
+    padding: 10px;
+    transition: all ease 0.25s;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 0px;
+    margin: 0;
+  }
+}
+
+.profile-bio {
+  margin-top: 20px;
+  padding: 1px 20px 10px 20px !important;
+  transition: all linear 1.5s;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0;
+}
+
+footer {
+  color: white;
+  font-weight: bold;
+  background-color: black;
 }

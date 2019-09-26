@@ -2,12 +2,9 @@ header {
   background: black;
   display: flex;
   justify-content: space-between;
-
-  &:hover {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 3.5s ease infinite;
-  }
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 5s ease infinite;
 
   .logo {
     a {
@@ -20,7 +17,7 @@ header {
       // text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px white, 0 0 70px black;
     }
 
-    p a:hover {
+    a:hover {
       animation: neon6 1.5s ease-in-out infinite alternate;
     }
   }
@@ -35,7 +32,7 @@ header {
       text-decoration: none;
       transition: all 0.25s ease;
       &:hover {
-        text-transform: uppercase;
+        text-shadow: #fc0 1px 0 10px;
         font-weight: bold;
       }
     }

@@ -276,7 +276,7 @@ html {
 html,
 body {
   font-family: "Source Sans Pro", Sans-Serif;
-  background-color: gainsboro;
+  background-color: black;
 }
 h1,
 h2,
@@ -343,8 +343,11 @@ header nav a:hover {
 }
 footer {
   padding: 1%;
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
+  color: white;
+  font-weight: bold;
+  background: black;
 }
 .hero {
   background-color: #898d82;
@@ -481,7 +484,7 @@ footer {
 }
 .product .about-product .product-text p {
   padding: 1%;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 2%;
 }
 .product .about-product img {
@@ -494,11 +497,12 @@ footer {
   }
 }
 .about-us {
-  background: gainsboro;
+  background: black;
   text-align: center;
 }
 .about-us h3 {
   font-size: 4rem;
+  color: white;
 }
 .about-us .group {
   display: flex;
@@ -530,6 +534,7 @@ footer {
 }
 .profile-card {
   margin: 1%;
+  border: 1px solid black;
   border-radius: 10%;
   margin: 0 auto;
   display: block;
@@ -549,7 +554,7 @@ footer {
   background-size: 400% 400%;
   animation: gradientBG 5s ease infinite;
   border-radius: 5px;
-  border: 3px solid black;
+  border: 3px solid white;
   height: 42rem;
   width: 30rem;
 }
@@ -560,11 +565,11 @@ footer {
   text-align: center;
 }
 .teamMember img {
-  border-radius: 10%;
+  border-radius: 50%;
   margin: 20px auto;
   display: block;
   width: 20rem;
-  border: 4px solid black;
+  border: 3px solid white;
 }
 .teamMember h1 {
   position: relative;
@@ -597,5 +602,5 @@ footer {
 footer {
   color: white;
   font-weight: bold;
-  background-color: black;
+  background: black;
 }

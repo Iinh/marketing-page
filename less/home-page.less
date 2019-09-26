@@ -1,0 +1,266 @@
+.hero {
+  background-color: #898d82;
+  @media @mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  position: relative;
+  text-align: center;
+  .hero-img {
+    img {
+      position: relative;
+      max-width: 100%;
+    }
+  }
+
+  .container {
+    @media @mobile {
+      display: inline-block;
+      width: 70%;
+      top: 20vh;
+      left: 15vw;
+    }
+    background-color: black;
+    color: white;
+    text-shadow: black 2px 2px;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: bold;
+    display: flex;
+    position: absolute;
+    top: 50vh;
+    left: 5vw;
+    right: 5vw;
+    z-index: 1;
+    width: 90%;
+    div {
+      width: 100%;
+    }
+  }
+}
+
+#flip {
+  @media @mobile {
+  }
+  height: 45px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#flip > div > div {
+  color: white;
+  height: 45px;
+  width: 100;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+#flip div:first-child {
+  @media @mobile {
+  }
+  animation: show 3s linear 25;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: 7px; /*to erase bottom-border*/
+  min-height: 100px;
+  max-height: 150px;
+  @media @mobile {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+.product {
+  background-image: -webkit-linear-gradient(120deg, gainsboro 50%, #898d82 50%);
+  min-height: 500px;
+  border-top: 1px solid #898d82;
+  @media @mobile {
+    background-image: -webkit-linear-gradient(
+      90deg,
+      gainsboro 50%,
+      #898d82 50%
+    );
+  }
+  width: 100%;
+  h2 {
+    text-align: center;
+  }
+  .about-product {
+    display: flex;
+    @media @mobile {
+      flex-direction: column;
+    }
+    &:nth-child(1) {
+      h2 {
+        background: white;
+        margin-left: 20%;
+        margin-right: 20%;
+        font-weight: bold;
+        color: #898d82;
+      }
+      flex-direction: row-reverse;
+    }
+    &:nth-child(2) {
+      h2 {
+        color: white;
+        font-weight: bold;
+        margin-left: 20%;
+        margin-right: 20%;
+        background: #7d8177;
+      }
+    }
+
+    .product-text {
+      padding: 6%;
+      text-align: justify;
+      p {
+        padding: 1%;
+        font-size: 2rem;
+        margin: 2%;
+      }
+    }
+
+    img {
+      max-width: 35%;
+      visibility: hidden;
+      @media @mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+.about-us {
+  background: black;
+  text-align: center;
+  h3 {
+    font-size: 4rem;
+    color: white;
+  }
+  .group {
+    display: flex;
+    margin: 2%;
+
+    @media only screen and (max-width: 1000px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2,
+      p {
+        font-size: 12px;
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2,
+      p {
+        font-size: 8px;
+      }
+    }
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.profile-card {
+  margin: 1%;
+  @media @mobile {
+    margin-top: 4%;
+  }
+  border: 1px solid black;
+  border-radius: 10%;
+  margin: 0 auto;
+  display: block;
+  height: 24rem;
+  width: 24rem;
+  background-size: cover;
+  overflow: hidden;
+  transition: all ease 0.3s;
+  &:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 5s ease infinite;
+    border-radius: 5px;
+    border: 3px solid white;
+    height: 42rem;
+    width: 30rem;
+
+    .profile-bio {
+      opacity: 1;
+    }
+  }
+}
+
+.teamMember {
+  text-align: center;
+  img {
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    width: 20rem;
+    border: 3px solid white;
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    line-height: 25px;
+    display: inline-block;
+    padding: 10px;
+    transition: all ease 0.25s;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 0px;
+    margin: 0;
+  }
+}
+
+.profile-bio {
+  margin-top: 20px;
+  padding: 1px 20px 10px 20px !important;
+  transition: all linear 1.5s;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0;
+}
+
+footer {
+  color: white;
+  font-weight: bold;
+  background: black;
+}

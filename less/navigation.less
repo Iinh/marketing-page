@@ -1,0 +1,40 @@
+header {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 5s ease infinite;
+
+  .logo {
+    a {
+      color: white;
+      font-family: "Pacifico", cursive;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-size: 4rem;
+      font-style: italic;
+      // text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px white, 0 0 70px black;
+    }
+
+    a:hover {
+      animation: neon6 1.5s ease-in-out infinite alternate;
+    }
+  }
+  nav {
+    display: flex;
+    a {
+      color: white;
+      padding: 2rem;
+      font-style: @body-font;
+      font-size: 2rem;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      &:hover {
+        text-shadow: #fc0 1px 0 10px;
+        font-weight: bold;
+      }
+    }
+  }
+}

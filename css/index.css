@@ -343,7 +343,7 @@ footer {
   display: inline-block;
 }
 .hero .slogan .text-flip div:first-child {
-  animation: show 3s linear 25;
+  animation: show 3s linear infinite;
 }
 .waves {
   position: relative;
@@ -482,7 +482,7 @@ footer {
   width: 24rem;
   background-size: cover;
   overflow: hidden;
-  transition: all ease 0.35s;
+  transition: all ease 0.8s;
 }
 @media (max-width: 600px) {
   .profile-card {

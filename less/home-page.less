@@ -52,7 +52,7 @@
       display: inline-block;
     }
 
-    #flip div:first-child {
+    .text-flip div:first-child {
       @media @mobile {
       }
       animation: show 3s linear 25;
@@ -206,7 +206,7 @@
   width: 24rem;
   background-size: cover;
   overflow: hidden;
-  transition: all ease 0.3s;
+  transition: all ease 0.35s;
   &:hover {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -219,6 +219,14 @@
     .profile-bio {
       opacity: 1;
     }
+  }
+  .profile-bio {
+    margin-top: 20px;
+    padding: 1px 20px 10px 20px !important;
+    transition: all linear 1.5s;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
   }
 }
 
@@ -252,13 +260,4 @@
     line-height: 0px;
     margin: 0;
   }
-}
-
-.profile-bio {
-  margin-top: 20px;
-  padding: 1px 20px 10px 20px !important;
-  transition: all linear 1.5s;
-  color: #fff;
-  font-size: 14px;
-  opacity: 0;
 }

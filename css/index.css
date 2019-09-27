@@ -342,7 +342,7 @@ footer {
   margin-bottom: 45px;
   display: inline-block;
 }
-.hero .slogan #flip div:first-child {
+.hero .slogan .text-flip div:first-child {
   animation: show 3s linear 25;
 }
 .waves {
@@ -482,7 +482,7 @@ footer {
   width: 24rem;
   background-size: cover;
   overflow: hidden;
-  transition: all ease 0.3s;
+  transition: all ease 0.35s;
 }
 @media (max-width: 600px) {
   .profile-card {
@@ -500,6 +500,14 @@ footer {
 }
 .profile-card:hover .profile-bio {
   opacity: 1;
+}
+.profile-card .profile-bio {
+  margin-top: 20px;
+  padding: 1px 20px 10px 20px !important;
+  transition: all linear 1.5s;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0;
 }
 .teamMember {
   text-align: center;
@@ -530,12 +538,4 @@ footer {
   font-weight: normal;
   line-height: 0px;
   margin: 0;
-}
-.profile-bio {
-  margin-top: 20px;
-  padding: 1px 20px 10px 20px !important;
-  transition: all linear 1.5s;
-  color: #fff;
-  font-size: 14px;
-  opacity: 0;
 }
